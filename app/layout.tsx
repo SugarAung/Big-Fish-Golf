@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import WhatsAppButtonWrapper from "@/components/WhatsAppButtonWrapper";
 import { CartProvider } from "@/context/CartContext";
 
 const playfair = Playfair_Display({
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className="bg-dark text-ink font-sans antialiased">
         <CartProvider>
           {children}
-          <WhatsAppButton />
+          <WhatsAppButtonWrapper />
         </CartProvider>
       </body>
     </html>
