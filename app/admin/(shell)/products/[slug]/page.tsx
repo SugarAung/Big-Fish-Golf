@@ -2,6 +2,10 @@ import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import ProductEditForm from "./ProductEditForm";
 
+export function generateStaticParams() {
+  return products.map((p) => ({ slug: p.slug }));
+}
+
 export default async function ProductEditPage({
   params,
 }: {
